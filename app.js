@@ -11,7 +11,7 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + "/signUp.html");
 });
 
-app.post("/", function (req, res) {
+app.post("/data", function (req, res) {
   const FirstName = req.body.FirstName;
   const LastName = req.body.LastName;
   const email = req.body.Email;
@@ -20,7 +20,6 @@ app.post("/", function (req, res) {
     members: [
       {
         email_address: email,
-
         mearge_fields: {
           FNAME: FirstName,
           LNAME: LastName,
@@ -35,13 +34,13 @@ app.post("/", function (req, res) {
 
   const options = {
     method: "POST",
-    auth: "kushwah:d622ead8acd42edb6f20046d3b84f4e5-us1",
+    auth: "kushwah:7a0b2d665e3f9c15d2baea1d246cb6f6-us1",
   };
 
   const requests = https.request(url, options, function (response) {
     if (response.statusCode === 200) {
       res.send("Completed");
-    } else console.log(err);
+    } else console.log("not found");
 
     response.on("data", function (data) {
       console.log(JSON.parse(data));

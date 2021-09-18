@@ -2,7 +2,7 @@
   "name": "expressmaillingstore",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": " nodemon app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "heroku": "^7.59.0",
     "nodemon": "^2.0.12",
